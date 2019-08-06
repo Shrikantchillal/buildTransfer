@@ -18,7 +18,7 @@ class ReplicationStatus extends React.Component {
     }
 
     componentWillMount() {
-        const apiUrl = 'http://ps-api-gwy-01.i.jaspersystems.com/';
+        const apiUrl = 'http://localhost:3000';
         
         this.getGamers(apiUrl);
         this.getBuilds(apiUrl);
@@ -26,7 +26,7 @@ class ReplicationStatus extends React.Component {
     }
 
     getDcs(apiUrl) {
-        axios.get(apiUrl + 'cmdb/dcs')
+        axios.get(apiUrl + '/dcs')
         .then(res => {
             console.log('dcs', res.data)
             this.state.dcs = res;
@@ -56,7 +56,7 @@ class ReplicationStatus extends React.Component {
         })
     }
     getGamers(apiUrl) {
-        axios.get(apiUrl + 'buildtransfer/gamers')
+        axios.get(apiUrl + '/gamers')
         .then(res => {
             console.log('gamers', res.data);
             // this.getBuilds(apiUrl, res.data)
@@ -65,7 +65,7 @@ class ReplicationStatus extends React.Component {
         })
     }
     getBuilds(apiUrl) {
-        axios.get(apiUrl + 'buildtransfer/builds')
+        axios.get(apiUrl + '/builds')
         .then(res => {
             console.log('builds', res.data)
             // this.getDcs(apiUrl, data, gamersData);
