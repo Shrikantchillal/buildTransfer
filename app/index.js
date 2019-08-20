@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import './index.css'
 
-import Nav from './components/nav'
+import Header from './components/header'
 import SignUp from './components/signup'
 import StorageUtilization from './components/storageUtilization'
 import ReplicationStatus from './components/replicationStatus'
@@ -16,7 +16,7 @@ class App extends React.Component {
     render() {
         return(
             <Router>
-                <Nav />
+                <Header />
                 <div className='container'>
                     <Switch>
                         <Route path="/" component={SignUp} exact />

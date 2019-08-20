@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-class Nav extends React.Component {
+class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -59,4 +59,4 @@ class Nav extends React.Component {
     }
 }
 
-export default Nav;
+export default Header;
