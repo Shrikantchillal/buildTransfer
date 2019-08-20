@@ -32,7 +32,7 @@ class Routes extends React.Component {
     render() {
         return(
             <div>
-                <h3 class="mt-3 mb-3">Primary Data route table</h3>
+                <h3 class="pt-3 mb-3">Primary Data route table</h3>
                 <table className='table'>
                     <thead>
                         <tr>

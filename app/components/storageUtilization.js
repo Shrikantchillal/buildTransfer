@@ -24,7 +24,7 @@ class StorageUtilization extends React.Component{
     render() {
         return(
             <div>
-                <h3 class="mt-3 mb-3">Storage Utilization</h3>
+                <h3 class="pt-3 mb-3">Storage Utilization</h3>
                 <table className="table">
                     <thead>
                         <tr>

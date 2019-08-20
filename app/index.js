@@ -17,7 +17,7 @@ class App extends React.Component {
         return(
             <Router>
                 <Header />
-                <div className='container'>
+                <div className='container wrapper'>
                     <Switch>
                         <Route path="/" component={SignUp} exact />
                         <Route path="/replicationStatus" component={ReplicationStatus} />

@@ -28,10 +28,10 @@ class ReplicationStatus extends React.Component {
     render() {
         return(
             <div>
-                <h3 class="mt-3 mb-3">Replication Status</h3>
+                <h3 class="pt-3 mb-3">Replication Status</h3>
                 <Accordion>
                     {this.state.buildsData.map((dcList, index) => (
-                        <div key={index} label={dcList.dc_name}>
+                        <div key={index} label={dcList.dc_name} >
                             <table className='table'>
                                 <thead>
                                     <tr>

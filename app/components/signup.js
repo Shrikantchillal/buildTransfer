@@ -7,7 +7,8 @@ class SignUp extends React.Component {
         super(props);
         this.state = {
             username: '',
-            password: ''        
+            password: '',
+            errMessage: ''
         }
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -15,13 +16,12 @@ class SignUp extends React.Component {
 
     onChange(e) {
         this.setState({
-            [e.target.name]: e.target.value,
-            validUser: false
+            [e.target.name]: e.target.value
         })        
     }
     onSubmit(e) {
-        e.preventDefault();        
-        (this.state.username === contant.username && this.state.password === contant.password) ? this.setState({validUser: true })  : null
+        e.preventDefault();
+        (this.state.username === contant.username && this.state.password === contant.password) ? this.setState({validUser: true })  : this.setState({errMessage: 'You are not a valid user' })
     }
 
     render() {
@@ -29,7 +29,7 @@ class SignUp extends React.Component {
             <div className='row'>
                 <div className='col-md-3'>
                     <form onSubmit={this.onSubmit}>
-                        <div>{this.state.validUser ? this.props.history.push('/replicationStatus') : <div className='error-message'>You are not a valid User</div> }</div>
+                        <div>{this.state.validUser ? this.props.history.push('/replicationStatus') : <div className='error-message'>{this.state.errMessage}</div> }</div>
                         <div>
                             <label>Username:</label>
                             <input type="text" name="username" value={this.state.username} onChange={this.onChange} className='form-control' />
@@ -38,7 +38,7 @@ class SignUp extends React.Component {
                             <label>Password:</label>
                             <input type="password" name="password" value={this.state.password} onChange={this.onChange} className='form-control' />
                         </div>
-                        <button type="submit" className='btn btn-primary'>Submit</button>
+                        <button type="submit" className='btn btn-primary mt-3'>Submit</button>
                     </form>
                 </div>
                 <div className='col-md-9'></div>
