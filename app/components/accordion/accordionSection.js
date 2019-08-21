@@ -6,16 +6,16 @@ class AccordionSection extends React.Component {
         children: PropTypes.instanceOf(Object).isRequired,
         isOpen: PropTypes.bool.isRequired,
         label: PropTypes.string.isRequired,
-        onclick: PropTypes.func.isRequired
+        onOpen: PropTypes.func.isRequired
     };
 
-    onClick = () => {
-        this.props.onClick(this.props.label);
+    onOpen = () => {
+        this.props.onOpen(this.props.label);
     };
 
     render() {
         const {
-            onClick,
+          onOpen,
             props: { isOpen, label },
           } = this;
         return (
@@ -27,7 +27,7 @@ class AccordionSection extends React.Component {
               marginBottom: '4px'
             }}
           >
-            <div onClick={onClick} style={{ cursor: 'pointer', padding: 5 }}>
+            <div onClick={onOpen} style={{ cursor: 'pointer', padding: 5 }}>
               {label}
               <div style={{ float: 'right' }}>
                 {!isOpen && <span>&#9650;</span>}

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as contant from '../constant/contant'
+import * as constant from '../constant/constant'
 
 class SignUp extends React.Component {
 
@@ -21,7 +21,7 @@ class SignUp extends React.Component {
     }
     onSubmit(e) {
         e.preventDefault();
-        (this.state.username === contant.username && this.state.password === contant.password) ? this.setState({validUser: true })  : this.setState({errMessage: 'You are not a valid user' })
+        (this.state.username === constant.USERNAME && this.state.password === constant.PASSWORD) ? this.setState({validUser: true })  : this.setState({errMessage: 'You are not a valid user' })
     }
 
     render() {

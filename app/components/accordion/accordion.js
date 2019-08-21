@@ -16,7 +16,7 @@ class Accordion extends React.Component {
         this.state = { openSections };
     }
 
-    onClick = label => {
+    onOpen = label => {
         const {
             state: { openSections },
         } = this;
@@ -32,7 +32,7 @@ class Accordion extends React.Component {
 
   render() {
     const {
-      onClick,
+      onOpen,
       props: { children },
       state: { openSections },
     } = this;
@@ -43,7 +43,7 @@ class Accordion extends React.Component {
           <AccordionSection
             isOpen={!!openSections[child.props.label]}
             label={child.props.label}
-            onClick={onClick}
+            onOpen={onOpen}
           >
             {child.props.children}
           </AccordionSection>

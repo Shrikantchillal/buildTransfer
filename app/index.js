@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import './index.css'
+import ReactDOM from 'react-dom';
+import './index.css';
 
-import Header from './components/header'
-import SignUp from './components/signup'
-import StorageUtilization from './components/storageUtilization'
-import ReplicationStatus from './components/replicationStatus'
-import Routes from './components/routes'
-import NotFound from './components/notFound'
+import Header from './components/header';
+import SignUp from './components/signup';
+import StorageUtilization from './components/storageUtilization';
+import ReplicationStatus from './components/replicationStatus';
+import Routes from './components/routes';
+import NotFound from './components/notFound';
 
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -31,4 +31,4 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'));

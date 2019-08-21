@@ -20,15 +20,15 @@ class ReplicationStatus extends React.Component {
     getBuildsData(apiUrl){
         axios.get(apiUrl + '/buildsData')
         .then(res => {
-            console.log('builds', res.data)
-            this.setState({buildsData: res.data[0]})
-        })
+            console.log('builds', res.data);
+            this.setState({buildsData: res.data[0]});
+        });
     }
 
     render() {
         return(
             <div>
-                <h3 class="pt-3 mb-3">Replication Status</h3>
+                <h3 className="pt-3 mb-3">Replication Status</h3>
                 <Accordion>
                     {this.state.buildsData.map((dcList, index) => (
                         <div key={index} label={dcList.dc_name} >
